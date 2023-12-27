@@ -146,8 +146,8 @@ class Server:
         while True:
             try:
                 allData=self.connection1.recv(1024).decode('utf-8')
-                print("receive -----")
-                print(allData)
+                #print("receive -----")
+                #print(allData)
             except:
                 if self.tcp_flag:
                     if max(self.battery_voltage) > 6.4:
