@@ -81,7 +81,7 @@ class Server:
     def send_data(self,connect,data):
         try:
             connect.send(data.encode('utf-8'))
-            print("send",data)
+            #print("send",data)
         except Exception as e:
             print(e)
     def transmission_video(self):
@@ -161,7 +161,7 @@ class Server:
                 break
             else:
                 cmdArray=allData.split('\n')
-                # if cmdArray does nto include CMD_WORKING_TIME, then print it
+                # if cmdArray does not include CMD_WORKING_TIME or CMD_POWER
                 if cmd.CMD_WORKING_TIME not in cmdArray:
                     print("cmdArray")
                     print(cmdArray)
