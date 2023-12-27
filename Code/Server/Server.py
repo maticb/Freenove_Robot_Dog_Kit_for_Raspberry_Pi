@@ -81,7 +81,7 @@ class Server:
     def send_data(self,connect,data):
         try:
             connect.send(data.encode('utf-8'))
-            #print("send",data)
+            print("send",data)
         except Exception as e:
             print(e)
     def transmission_video(self):
@@ -146,7 +146,8 @@ class Server:
         while True:
             try:
                 allData=self.connection1.recv(1024).decode('utf-8')
-                #print(allData)
+                print("receive -----")
+                print(allData)
             except:
                 if self.tcp_flag:
                     if max(self.battery_voltage) > 6.4:
@@ -160,7 +161,8 @@ class Server:
                 break
             else:
                 cmdArray=allData.split('\n')
-                #print(cmdArray)
+                print("cmdArray")
+                print(cmdArray)
                 if cmdArray[-1] !="":
                     cmdArray==cmdArray[:-1]
             
