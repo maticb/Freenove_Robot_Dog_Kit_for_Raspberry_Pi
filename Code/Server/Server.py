@@ -162,7 +162,7 @@ class Server:
             else:
                 cmdArray=allData.split('\n')
                 # if cmdArray does not include CMD_WORKING_TIME or CMD_POWER
-                if cmd.CMD_WORKING_TIME not in cmdArray:
+                if cmd.CMD_WORKING_TIME not in cmdArray and cmd.CMD_POWER not in cmdArray:
                     print("cmdArray")
                     print(cmdArray)
                 
